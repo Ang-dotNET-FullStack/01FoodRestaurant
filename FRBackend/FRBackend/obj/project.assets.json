@@ -1238,6 +1238,31 @@
             "rid": "win"
           }
         }
+      },
+      "FR.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FR.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "compile": {
+          "bin/placeholder/FR.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FR.DataAccess.dll": {}
+        }
+      },
+      "FR.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/FR.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FR.Models.dll": {}
+        }
       }
     }
   },
@@ -3899,10 +3924,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "FR.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../FR.DataAccess/FR.DataAccess.csproj",
+      "msbuildProject": "../FR.DataAccess/FR.DataAccess.csproj"
+    },
+    "FR.Models/1.0.0": {
+      "type": "project",
+      "path": "../FR.Models/FR.Models.csproj",
+      "msbuildProject": "../FR.Models/FR.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "FR.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
@@ -3936,7 +3972,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.DataAccess\\FR.DataAccess.csproj": {
+              "projectPath": "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.DataAccess\\FR.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

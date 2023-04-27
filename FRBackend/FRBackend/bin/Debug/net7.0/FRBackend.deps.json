@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "FRBackend/1.0.0": {
         "dependencies": {
+          "FR.DataAccess": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
@@ -672,6 +673,21 @@
             "fileVersion": "5.0.20.51904"
           }
         }
+      },
+      "FR.DataAccess/1.0.0": {
+        "dependencies": {
+          "FR.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
+        },
+        "runtime": {
+          "FR.DataAccess.dll": {}
+        }
+      },
+      "FR.Models/1.0.0": {
+        "runtime": {
+          "FR.Models.dll": {}
+        }
       }
     }
   },
@@ -1198,6 +1214,16 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "FR.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FR.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

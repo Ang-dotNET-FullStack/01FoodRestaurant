@@ -10,3 +10,8 @@ F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\refint\FR.DataAccess.dll
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.pdb
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\ref\FR.DataAccess.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.Models.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.Models.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.csproj.CopyComplete
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.DataAccess.runtimeconfig.json
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.genruntimeconfig.cache
