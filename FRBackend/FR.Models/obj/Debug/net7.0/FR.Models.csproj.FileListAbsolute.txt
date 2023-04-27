@@ -1,0 +1,12 @@
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\bin\Debug\net7.0\FR.Models.deps.json
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\bin\Debug\net7.0\FR.Models.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\bin\Debug\net7.0\FR.Models.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.csproj.AssemblyReference.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.GeneratedMSBuildEditorConfig.editorconfig
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.AssemblyInfoInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.AssemblyInfo.cs
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.csproj.CoreCompileInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\refint\FR.Models.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\FR.Models.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.Models\obj\Debug\net7.0\ref\FR.Models.dll

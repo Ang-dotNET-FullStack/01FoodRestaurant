@@ -1,0 +1,12 @@
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.DataAccess.deps.json
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.DataAccess.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\bin\Debug\net7.0\FR.DataAccess.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.csproj.AssemblyReference.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.AssemblyInfoInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.AssemblyInfo.cs
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.csproj.CoreCompileInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\refint\FR.DataAccess.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\FR.DataAccess.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FR.DataAccess\obj\Debug\net7.0\ref\FR.DataAccess.dll
