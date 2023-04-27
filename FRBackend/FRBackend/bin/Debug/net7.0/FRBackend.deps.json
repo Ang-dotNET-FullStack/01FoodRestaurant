@@ -9,6 +9,7 @@
       "FRBackend/1.0.0": {
         "dependencies": {
           "FR.DataAccess": "1.0.0",
+          "FR.Services": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.4",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
@@ -688,6 +689,15 @@
         "runtime": {
           "FR.Models.dll": {}
         }
+      },
+      "FR.Services/1.0.0": {
+        "dependencies": {
+          "FR.DataAccess": "1.0.0",
+          "FR.Models": "1.0.0"
+        },
+        "runtime": {
+          "FR.Services.dll": {}
+        }
       }
     }
   },
@@ -1221,6 +1231,11 @@
       "sha512": ""
     },
     "FR.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FR.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -53,6 +53,12 @@ F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRB
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.DataAccess.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Models.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Services.dll
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.DataAccess.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Services.pdb
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Models.pdb
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.csproj.AssemblyReference.cache
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.GeneratedMSBuildEditorConfig.editorconfig
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.AssemblyInfoInputs.cache
@@ -74,7 +80,3 @@ F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRB
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.pdb
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.genruntimeconfig.cache
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\ref\FRBackend.dll
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.DataAccess.dll
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Models.dll
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.DataAccess.pdb
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Models.pdb

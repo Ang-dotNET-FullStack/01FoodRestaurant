@@ -1,4 +1,6 @@
 using FR.DataAccess.Data;
+using FR.Services;
+using FR.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<FRDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("FRConnection"))
 );
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -1263,6 +1263,20 @@
         "runtime": {
           "bin/placeholder/FR.Models.dll": {}
         }
+      },
+      "FR.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "FR.DataAccess": "1.0.0",
+          "FR.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FR.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FR.Services.dll": {}
+        }
       }
     }
   },
@@ -3934,11 +3948,17 @@
       "type": "project",
       "path": "../FR.Models/FR.Models.csproj",
       "msbuildProject": "../FR.Models/FR.Models.csproj"
+    },
+    "FR.Services/1.0.0": {
+      "type": "project",
+      "path": "../FR.Services/FR.Services.csproj",
+      "msbuildProject": "../FR.Services/FR.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "FR.DataAccess >= 1.0.0",
+      "FR.Services >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
@@ -3975,6 +3995,9 @@
           "projectReferences": {
             "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.DataAccess\\FR.DataAccess.csproj": {
               "projectPath": "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.DataAccess\\FR.DataAccess.csproj"
+            },
+            "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.Services\\FR.Services.csproj": {
+              "projectPath": "F:\\Proj\\Angular + Asp .net\\Angular+.NET FullStack\\01FoodRestaurant\\FRBackend\\FR.Services\\FR.Services.csproj"
             }
           }
         }
