@@ -11,7 +11,7 @@ namespace FR.Services
         {
             _context = context;
         }
-        public List<Category> GetAll()
+        public IEnumerable<Category> GetAll()
         {
             var categories = _context.Category.ToList();
             return categories;

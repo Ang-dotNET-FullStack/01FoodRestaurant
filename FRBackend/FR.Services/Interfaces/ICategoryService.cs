@@ -4,6 +4,6 @@ namespace FR.Services.Interfaces
 {
     public interface ICategoryService
     {
-        List<Category> GetAll();
+        IEnumerable<Category> GetAll();
     }
 }

@@ -15,7 +15,7 @@ namespace FRBackend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Category>>> GetCategories()
+        public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
             var categories = _categoryService.GetAll();
             if (categories == null)
