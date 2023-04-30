@@ -10,17 +10,19 @@
     
     <br /><br />
 
-    <table>
+    <table class="table table-light">
         <thead>
             <tr>
                 <th>Category Name</th>
                 <th>Display Order</th>
+                <th></th>
             </tr>          
         </thead>
         <tbody>
-            <tr>
-                <th>name</th>
-                <th>order</th>
+            <tr *ngFor="let category of Categories">
+                <th>{{category.id}}</th>
+                <th>{{category.name}}</th>
+                <th>{{category.displayOrder}}</th>
             </tr>
         </tbody>
     </table>

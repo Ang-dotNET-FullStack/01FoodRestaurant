@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiBaseService {
 
-  readonly baseUrl = 'https://localhost:44333/api/';
+  readonly baseUrl = 'https://localhost:44308/api/';
 
   constructor(private http: HttpClient) { }
 
@@ -16,24 +17,26 @@ export class ApiBaseService {
     return this.http.get<T>(this.baseUrl + url);
   }
 
-  public get<T>(
+  public getOne<T>(
     id:number,
     url:string
-    ){
-    return this.http.get(this.baseUrl+url+"/"+id);
+    ): Observable<T>{
+    return this.http.get<T>(this.baseUrl+url+"/"+id);
   }
 
   public create<T>(
+    url: string,
     requestModel: any
-  ){
-    return this.http.post<T>(this.baseUrl, requestModel);
+  ): Observable<T> {
+    return this.http.post<T>(this.baseUrl + url, requestModel);
   }
 
   public update<T>(
     id: number,
+    url:string,
     requestModel: any
-  ){    
-    return this.http.put<T>(this.baseUrl, requestModel);
+  ): Observable<T>{    
+    return this.http.put<T>(this.baseUrl+url, requestModel);
   }
 
   public delete(id: number){
