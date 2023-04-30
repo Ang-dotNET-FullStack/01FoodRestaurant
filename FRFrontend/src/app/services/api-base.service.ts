@@ -10,12 +10,17 @@ export class ApiBaseService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll<T>(){
-    return this.http.get<T>(this.baseUrl);
+  public getAll<T>(
+    url:string
+  ){
+    return this.http.get<T>(this.baseUrl + url);
   }
 
-  public get<T>(id:number, API: string){
-    return this.http.get(this.baseUrl+API+"/"+id);
+  public get<T>(
+    id:number,
+    url:string
+    ){
+    return this.http.get(this.baseUrl+url+"/"+id);
   }
 
   public create<T>(
