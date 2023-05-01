@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import Category from 'src/app/Model/Category.model';
 import { CategoryApiService } from 'src/app/services/API/category-api.service';
 
 @Injectable({
@@ -10,5 +11,9 @@ export class CategoryService {
 
   public getCategories(){
     return this.categoryApiService.getAllCategories();
+  }
+
+  public createCategory(category: Category){
+    return this.categoryApiService.createCategory(category);
   }
 }

@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import Category from '../Model/Category.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiBaseService {
 
+  req: Category = new Category(0,"f",54);
   readonly baseUrl = 'https://localhost:44308/api/';
 
   constructor(private http: HttpClient) { }

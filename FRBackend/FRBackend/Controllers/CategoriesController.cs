@@ -24,5 +24,16 @@ namespace FRBackend.Controllers
             }
             return Ok(categories);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCategories(Category category)
+        {
+            var newCategory = _categoryService.Add(category);
+            if (newCategory == null)
+            {
+                return BadRequest();
+            }
+            return Ok(newCategory);
+        }
     }
 }

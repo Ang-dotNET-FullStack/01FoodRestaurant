@@ -13,4 +13,8 @@ export class CategoryApiService {
   getAllCategories(): Observable<Category>{
     return this.apiBaseService.getAll("Categories");
   }
+
+  createCategory<Category>(category: Category): Observable<Category>{    
+    return this.apiBaseService.create("Categories", category);
+  } 
 }

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import Category from 'src/app/Model/Category.model';
+import { NgForm } from '@angular/forms';
+import { CategoryService } from '../category.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-category',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCategoryComponent implements OnInit {
 
-  constructor() { }
+  category: Category = new Category(0, "", 0);
+
+  constructor(
+    private categoryService: CategoryService,
+    private router: Router
+    ){}
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    this.categoryService.createCategory(this.category).subscribe(res=>{
+      console.log("Submited successfully!");
+    },
+    err=>{
+      console.log(err);
+    });
+    this.router.navigate(['category']);
   }
 
 }

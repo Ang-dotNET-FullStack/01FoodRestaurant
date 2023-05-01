@@ -2,8 +2,9 @@
 
 namespace FR.Services.Interfaces
 {
-    public interface ICategoryService
+    public interface ICategoryService : IRepository<Category>
     {
-        IEnumerable<Category> GetAll();
+        void Update(Category category);
+        void Save();
     }
 }
