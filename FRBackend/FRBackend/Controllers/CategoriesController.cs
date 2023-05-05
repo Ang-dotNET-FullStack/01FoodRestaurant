@@ -35,5 +35,14 @@ namespace FRBackend.Controllers
             }
             return Ok(newCategory);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateCategory(Category category)
+        {
+            var catrgory = _categoryService.Update(category);
+            if (category == null) return BadRequest();
+
+            return Ok(category);
+        }
     }
 }

@@ -33,12 +33,24 @@ namespace FR.Services
             return category;
         }
 
-        public void Update(Category category)
+        public Category Update(Category category)
         {
             var obj = _context.Category.FirstOrDefault(c => c.Id == category.Id);
+            if (obj == null) return null;
             obj.Name = category.Name;
             obj.DisplayOrder = category.DisplayOrder;
 
+            try
+            {
+                _context.Update(obj);
+                this.Save();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return obj;
         }
 
         public void Save()

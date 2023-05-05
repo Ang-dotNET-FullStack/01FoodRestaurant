@@ -1,6 +1,7 @@
 ﻿using FR.DataAccess.Data;
 using FR.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace FR.Services
 {
@@ -23,6 +24,16 @@ namespace FR.Services
         {
             IQueryable<T> query = dbSet;
             return query.ToList();
+        }
+
+        public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null)
+        {
+            IQueryable<T> query = dbSet;
+            if(filter != null)
+            {
+                query = query.Where(filter);
+            }
+            return query.FirstOrDefault();
         }
 
         public void Remove(T entity)
