@@ -16,4 +16,8 @@ export class CategoryService {
   public createCategory(category: Category){
     return this.categoryApiService.createCategory(category);
   }
+
+  public deleteCatgory(id: number){
+    return this.categoryApiService.deleteCategory(id);
+  }
 }

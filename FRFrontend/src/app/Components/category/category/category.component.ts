@@ -19,7 +19,15 @@ export class CategoryComponent implements OnInit {
   loadAllCategories(){
     this.categoryService.getCategories().subscribe(res => {
       this.Categories = res;
-    });
+    },
+    (err)=>{
+      console.log(err);
+    }
+    );
+  }
+
+  onDelete(id: number){
+    this.categoryService.deleteCatgory(id);
   }
 
 }

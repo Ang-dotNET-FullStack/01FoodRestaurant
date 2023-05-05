@@ -41,7 +41,11 @@ export class ApiBaseService {
     return this.http.put<T>(this.baseUrl+url, requestModel);
   }
 
-  public delete(id: number){
-    return this.http.delete(this.baseUrl);
+  public delete(
+    url:string,
+    id: number    
+    ): Observable<any>{
+      console.log(this.baseUrl+url+"/"+id);
+    return this.http.delete(this.baseUrl+url+"/"+id);
   }
 }

@@ -8,13 +8,18 @@ import Category from 'src/app/Model/Category.model';
 })
 export class CategoryApiService {
 
+  url:string ="Categories";
   constructor(private apiBaseService:ApiBaseService) { }
 
   getAllCategories(): Observable<Category>{
-    return this.apiBaseService.getAll("Categories");
+    return this.apiBaseService.getAll(this.url);
   }
 
   createCategory<Category>(category: Category): Observable<Category>{    
-    return this.apiBaseService.create("Categories", category);
+    return this.apiBaseService.create(this.url, category);
   } 
+
+  deleteCategory(id: number): Observable<any>{
+    return this.apiBaseService.delete(this.url, id);
+  }
 }
