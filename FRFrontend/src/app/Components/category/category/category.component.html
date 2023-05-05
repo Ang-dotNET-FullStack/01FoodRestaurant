@@ -22,9 +22,16 @@
         </thead>
         <tbody>
             <tr *ngFor="let category of Categories">
-                <th>{{category.id}}</th>
-                <th>{{category.name}}</th>
-                <th>{{category.displayOrder}}</th>
+                <td class="col-5">{{category.name}}</td>
+                <td class="col-4">{{category.displayOrder}}</td>
+                <td>
+                    <a class="btn btn-success col-5">
+                        Update
+                    </a>
+                    <a class="btn btn-danger col-5 float-end">
+                        Delete
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
