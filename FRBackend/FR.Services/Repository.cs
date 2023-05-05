@@ -36,9 +36,10 @@ namespace FR.Services
             return query.FirstOrDefault();
         }
 
-        public void Remove(T entity)
+        public T Remove(T entity)
         {
             dbSet.Remove(entity);
+            return entity;
         }
 
         public void RemoveRange(IEnumerable<T> entity)

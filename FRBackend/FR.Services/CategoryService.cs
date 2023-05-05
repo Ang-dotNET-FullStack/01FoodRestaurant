@@ -53,6 +53,24 @@ namespace FR.Services
             return obj;
         }
 
+        public Category Delete(int id)
+        {
+            var category = _context.Category.FirstOrDefault(c => c.Id == id);
+            if (category == null) return null;
+
+            try
+            {
+                _context.Remove(category);
+                this.Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return category;
+        }
+
         public void Save()
         {
             _context.SaveChanges();

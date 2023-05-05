@@ -39,7 +39,16 @@ namespace FRBackend.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCategory(Category category)
         {
-            var catrgory = _categoryService.Update(category);
+            var cat = _categoryService.Update(category);
+            if (cat == null) return BadRequest();
+
+            return Ok(cat);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            var category = _categoryService.Delete(id);
             if (category == null) return BadRequest();
 
             return Ok(category);
