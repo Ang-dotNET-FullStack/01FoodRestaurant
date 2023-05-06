@@ -7,6 +7,7 @@ import { CategoryModule } from './components/category/category.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
+import { FoodTypeModule } from './components/food-type/food-type.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavbarModule,
     CategoryModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FoodTypeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
