@@ -19,6 +19,10 @@ export class CategoryApiService {
     return this.apiBaseService.create(this.url, category);
   } 
 
+  updateCategory<Category>(id: number, category: Category): Observable<Category>{
+    return this.apiBaseService.update(this.url, id, category);
+  }
+
   deleteCategory(id: number): Observable<any>{
     return this.apiBaseService.delete(this.url, id);
   }

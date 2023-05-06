@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
+import Category from 'src/app/Model/Category.model';
 
 @Component({
   selector: 'app-category',
@@ -8,9 +9,13 @@ import { CategoryService } from '../category.service';
 })
 export class CategoryComponent implements OnInit {
 
+  category: Category;
   public Categories: any;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(private categoryService: CategoryService) 
+  {
+    this.category= new Category(0, "", 0);
+  }
 
   ngOnInit(): void {
     this.loadAllCategories();
@@ -27,7 +32,13 @@ export class CategoryComponent implements OnInit {
   }
 
   onDelete(id: number){
-    this.categoryService.deleteCatgory(id);
+    this.categoryService.deleteCatgory(id).subscribe(
+      (res) => {
+        this.categoryService.reloadPage();
+      },
+      (err)=>{
+        console.log(err);
+      }
+    );
   }
-
 }

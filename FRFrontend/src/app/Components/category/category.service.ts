@@ -17,7 +17,14 @@ export class CategoryService {
     return this.categoryApiService.createCategory(category);
   }
 
+  public updateCategory(id: number, category: Category){
+    return this.categoryApiService.updateCategory(id, category);
+  }
   public deleteCatgory(id: number){
     return this.categoryApiService.deleteCategory(id);
+  }
+
+  public reloadPage(){
+    window.location.reload();
   }
 }

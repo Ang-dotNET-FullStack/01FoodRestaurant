@@ -33,12 +33,13 @@ export class ApiBaseService {
     return this.http.post<T>(this.baseUrl + url, requestModel);
   }
 
-  public update<T>(
-    id: number,
+  public update<T>(    
     url:string,
+    id: number,
     requestModel: any
-  ): Observable<T>{    
-    return this.http.put<T>(this.baseUrl+url, requestModel);
+  ): Observable<T>{   
+    console.log(this.baseUrl+url+"/"+id); 
+    return this.http.put<T>(this.baseUrl+url+"/"+id, requestModel);
   }
 
   public delete(
