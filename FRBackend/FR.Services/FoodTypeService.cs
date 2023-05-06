@@ -18,9 +18,24 @@ namespace FR.Services
             return foodTypes;
         }
 
+        public FoodType Add(FoodType foodType)
+        {
+            try
+            {
+                _context.FoodTypes.AddAsync(foodType);
+                this.Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return foodType;
+        }
+
         public void Save()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
 
         public FoodType Update(FoodType foodType)

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FoodTypeService.cs~RF2f2d77aa.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FR.DataAccess\FR.DataAccess.csproj" />
     <ProjectReference Include="..\FR.Models\FR.Models.csproj" />
   </ItemGroup>
