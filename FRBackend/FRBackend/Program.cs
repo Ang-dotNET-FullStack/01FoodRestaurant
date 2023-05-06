@@ -13,6 +13,7 @@ builder.Services.AddDbContext<FRDbContext>(options =>
 );
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IFoodTypeService, FoodTypeService>();
 //builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
