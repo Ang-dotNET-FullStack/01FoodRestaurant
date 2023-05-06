@@ -37,8 +37,7 @@ export class ApiBaseService {
     url:string,
     id: number,
     requestModel: any
-  ): Observable<T>{   
-    console.log(this.baseUrl+url+"/"+id); 
+  ): Observable<T>{ 
     return this.http.put<T>(this.baseUrl+url+"/"+id, requestModel);
   }
 
@@ -46,7 +45,6 @@ export class ApiBaseService {
     url:string,
     id: number    
     ): Observable<any>{
-      console.log(this.baseUrl+url+"/"+id);
     return this.http.delete(this.baseUrl+url+"/"+id);
   }
 }

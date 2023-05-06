@@ -7,12 +7,12 @@
         <input type="hidden" name="Id" [value]="category.id"/>
         <div class="mb-3">
             <label class="form-label">Name: </label> 
-            <input type="text" class="form-control" placeholder="Category Name" name="CategoryName"
-            #Name="ngModel" [(ngModel)]="category.name" />
+            <input type="text" class="form-control" placeholder={{category.name}} 
+            name="CategoryName" #Name="ngModel" [(ngModel)]="category.name" />
         </div>
         <div class="mb-3">
             <label class="form-label">Display Order: </label>
-            <input type="text" name="displayOrder" placeholder="Display Order" 
+            <input type="text" name="displayOrder" placeholder="{{category.displayOrder}}"
             class="form-control" #Name="ngModel" [(ngModel)]="category.displayOrder"/>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>

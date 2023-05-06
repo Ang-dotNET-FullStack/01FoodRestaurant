@@ -12,13 +12,14 @@ export class CategoryComponent implements OnInit {
   category: Category;
   public Categories: any;
 
-  constructor(private categoryService: CategoryService) 
+  constructor(public categoryService: CategoryService) 
   {
     this.category= new Category(0, "", 0);
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     this.loadAllCategories();
+    
   }
 
   loadAllCategories(){

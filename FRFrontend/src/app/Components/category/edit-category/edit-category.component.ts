@@ -11,23 +11,30 @@ import { CategoryService } from '../category.service';
 })
 export class EditCategoryComponent implements OnInit {
 
-  category: Category = new Category(0, "", 0);
+  
+  category: Category;
 
   constructor(
-    private categoryService:CategoryService,
+    public categoryService:CategoryService,
     private router: Router
-   ) { }
+   ) 
+    {
+      this.category = this.categoryService.category;
+    }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
     this.categoryService.updateCategory(this.category.id, this.category).subscribe(res=>{
-      console.log("Submited successfully!");
+      console.log("Updated successfully!");
+      
     },
     err=>{
       console.log(err);
-    });
+    }
+    
+    )
     this.router.navigate(['category']);
   }
 }

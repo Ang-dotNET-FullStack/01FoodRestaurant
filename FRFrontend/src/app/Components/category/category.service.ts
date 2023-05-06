@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import Category from 'src/app/Model/Category.model';
 import { CategoryApiService } from 'src/app/services/API/category-api.service';
 
@@ -7,7 +8,15 @@ import { CategoryApiService } from 'src/app/services/API/category-api.service';
 })
 export class CategoryService {
 
-  constructor(private categoryApiService:CategoryApiService) { }
+  category: Category;
+
+  constructor(
+    private categoryApiService:CategoryApiService,
+    private router:Router
+    ) 
+  {
+    this.category= new Category(0,"",0);
+  }
 
   public getCategories(){
     return this.categoryApiService.getAllCategories();
@@ -26,5 +35,12 @@ export class CategoryService {
 
   public reloadPage(){
     window.location.reload();
+  }
+
+  public loadData(category:Category){
+    this.category.id=category.id;
+    this.category.name=category.name;
+    this.category.displayOrder=category.displayOrder;
+    this.router.navigate(['editCategory']);
   }
 }

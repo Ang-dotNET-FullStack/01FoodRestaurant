@@ -25,7 +25,7 @@
                 <td class="col-5">{{category.name}}</td>
                 <td class="col-4">{{category.displayOrder}}</td>
                 <td>
-                    <a class="btn btn-success col-5" href="editCategory">
+                    <a class="btn btn-success col-5" (click)="this.categoryService.loadData(category)">
                         Update
                     </a>
                     <button class="btn btn-danger col-5 float-end" (click)="onDelete(category.id)">
