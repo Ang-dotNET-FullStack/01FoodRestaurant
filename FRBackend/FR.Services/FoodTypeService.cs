@@ -50,16 +50,31 @@ namespace FR.Services
             }
 
             return fdType;
-        }  
+        }
+
+        public FoodType Update(FoodType foodType)
+        {
+            var obj = _context.FoodTypes.FirstOrDefault(f => f.Id == foodType.Id);
+            if (obj == null) return null;
+            obj.Name = foodType.Name;
+
+            try
+            {
+                _context.Update(obj);
+                this.Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return obj;
+        }
 
         public void Save()
         {
             _context.SaveChanges();
         }
 
-        public FoodType Update(FoodType foodType)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

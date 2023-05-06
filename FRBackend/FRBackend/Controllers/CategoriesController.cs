@@ -18,10 +18,8 @@ namespace FRBackend.Controllers
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
             var categories = _categoryService.GetAll();
-            if (categories == null)
-            {
-                return NotFound();
-            }
+            if (categories == null) return NotFound();
+            
             return Ok(categories);
         }
 
@@ -29,10 +27,8 @@ namespace FRBackend.Controllers
         public async Task<IActionResult> AddCategories(Category category)
         {
             var newCategory = _categoryService.Add(category);
-            if (newCategory == null)
-            {
-                return BadRequest();
-            }
+            if (newCategory == null) return BadRequest();
+            
             return Ok(newCategory);
         }
 

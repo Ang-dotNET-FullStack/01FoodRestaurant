@@ -33,6 +33,15 @@ namespace FRBackend.Controllers
             return Ok(newFoodtype);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateFoodType(FoodType foodType)
+        {
+            var ft = _foodTypeService.Update(foodType);
+            if (ft == null) return BadRequest();
+
+            return Ok(ft);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFoodType(int id)
         {
