@@ -33,6 +33,25 @@ namespace FR.Services
             return foodType;
         }
 
+        public FoodType Delete(int id)
+        {
+            var fdType = _context.FoodTypes.FirstOrDefault(f => f.Id == id);
+            if (fdType == null) return null;
+
+            try
+            {
+                _context.Remove(fdType);
+                this.Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+
+            return fdType;
+        }  
+
         public void Save()
         {
             _context.SaveChanges();
