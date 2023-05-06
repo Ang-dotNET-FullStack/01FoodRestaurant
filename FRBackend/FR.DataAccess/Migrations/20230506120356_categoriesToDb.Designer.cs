@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FR.DataAccess.Migrations
 {
     [DbContext(typeof(FRDbContext))]
-    [Migration("20230427075629_AddCategoryDb")]
-    partial class AddCategoryDb
+    [Migration("20230506120356_categoriesToDb")]
+    partial class categoriesToDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,7 @@ namespace FR.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Categories");
                 });
 #pragma warning restore 612, 618
         }
