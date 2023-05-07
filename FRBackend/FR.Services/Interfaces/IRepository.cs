@@ -9,5 +9,6 @@ namespace FR.Services.Interfaces
         void RemoveRange(IEnumerable<T> entity);
         IEnumerable<T> GetAll();
         T GetFirstOrDefault(Expression<Func<T, bool>>? filter= null);
+        void Save();
     }
 }

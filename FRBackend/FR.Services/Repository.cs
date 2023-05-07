@@ -46,5 +46,10 @@ namespace FR.Services
         {
             dbSet.RemoveRange(entity);
         }
+
+        public void Save()
+        {
+            _db.SaveChanges();
+        }
     }
 }

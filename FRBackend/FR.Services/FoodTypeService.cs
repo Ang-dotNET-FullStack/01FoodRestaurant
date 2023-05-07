@@ -23,7 +23,7 @@ namespace FR.Services
             try
             {
                 _context.FoodType.AddAsync(foodType);
-                this.Save();
+                Save();
             }
             catch(Exception e)
             {
@@ -41,7 +41,7 @@ namespace FR.Services
             try
             {
                 _context.Remove(fdType);
-                this.Save();
+                Save();
             }
             catch(Exception e)
             {
@@ -61,7 +61,7 @@ namespace FR.Services
             try
             {
                 _context.Update(obj);
-                this.Save();
+                Save();
             }
             catch(Exception e)
             {
@@ -69,12 +69,7 @@ namespace FR.Services
                 return null;
             }
             return obj;
-        }
-
-        public void Save()
-        {
-            _context.SaveChanges();
-        }
+        }        
 
     }
 }

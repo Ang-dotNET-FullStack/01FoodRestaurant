@@ -23,7 +23,7 @@ namespace FR.Services
             try
             {
                 _context.Category.AddAsync(category);
-                this.Save();
+                Save();
             }
             catch(Exception e)
             {
@@ -43,7 +43,7 @@ namespace FR.Services
             try
             {
                 _context.Update(obj);
-                this.Save();
+                Save();
             }
             catch (Exception e)
             {
@@ -61,7 +61,7 @@ namespace FR.Services
             try
             {
                 _context.Remove(category);
-                this.Save();
+                Save();
             }
             catch(Exception e)
             {
@@ -69,11 +69,6 @@ namespace FR.Services
                 return null;
             }
             return category;
-        }
-
-        public void Save()
-        {
-            _context.SaveChanges();
         }
     }
 }

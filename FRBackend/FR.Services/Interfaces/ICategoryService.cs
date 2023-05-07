@@ -6,6 +6,5 @@ namespace FR.Services.Interfaces
     {
         Category Update(Category category);
         Category Delete(int id);
-        void Save();
     }
 }

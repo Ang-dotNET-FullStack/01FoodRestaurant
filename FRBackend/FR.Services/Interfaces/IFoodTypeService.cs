@@ -6,6 +6,5 @@ namespace FR.Services.Interfaces
     {
         FoodType Update(FoodType foodType);
         FoodType Delete(int id);
-        void Save();
     }
 }
