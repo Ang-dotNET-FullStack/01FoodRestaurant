@@ -23,7 +23,7 @@
             <tr *ngFor="let foodType of foodTypes">
                 <td class="col-8">{{foodType.name}}</td>
                 <td>
-                    <a class="btn btn-success col-5">
+                    <a class="btn btn-success col-5" (click)="this.foodTypeService.loadData(foodType)">
                         Update
                     </a>
                     <button class="btn btn-danger col-5 float-end" (click)="onDelete(foodType.id)">

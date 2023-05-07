@@ -12,7 +12,7 @@ export class FoodTypeComponent implements OnInit {
   foodType : FoodType;
   public foodTypes: any;
 
-  constructor(private foodTypeService: FoodTypeService) 
+  constructor(public foodTypeService: FoodTypeService) 
   {
     this.foodType = new FoodType(0, "");
   }

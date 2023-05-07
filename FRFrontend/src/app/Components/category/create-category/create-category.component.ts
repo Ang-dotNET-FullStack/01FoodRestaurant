@@ -24,11 +24,11 @@ export class CreateCategoryComponent implements OnInit {
   onSubmit(form: NgForm){
     this.categoryService.createCategory(this.category).subscribe(res=>{
       console.log("Submited successfully!");
+      this.router.navigate(['category']);
     },
     err=>{
       console.log(err);
     });
-    this.router.navigate(['category']);
   }
 
 }
