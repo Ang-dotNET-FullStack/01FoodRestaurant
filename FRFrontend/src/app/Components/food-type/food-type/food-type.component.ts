@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import FoodType from 'src/app/Model/FoodType.model';
 
 @Component({
   selector: 'app-food-type',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodTypeComponent implements OnInit {
 
-  constructor() { }
+  foodType : FoodType;
+  public foodTypes: any;
+
+  constructor() 
+  {
+    this.foodType = new FoodType(0, "");
+  }
 
   ngOnInit(): void {
   }
