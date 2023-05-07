@@ -14,7 +14,7 @@ namespace FR.Services
 
         public IEnumerable<Category> GetAll()
         {
-            var categories = _context.Categories.ToList();
+            var categories = _context.Category.ToList();
             return categories;
         }
 
@@ -22,7 +22,7 @@ namespace FR.Services
         {
             try
             {
-                _context.Categories.AddAsync(category);
+                _context.Category.AddAsync(category);
                 this.Save();
             }
             catch(Exception e)
@@ -35,7 +35,7 @@ namespace FR.Services
 
         public Category Update(Category category)
         {
-            var obj = _context.Categories.FirstOrDefault(c => c.Id == category.Id);
+            var obj = _context.Category.FirstOrDefault(c => c.Id == category.Id);
             if (obj == null) return null;
             obj.Name = category.Name;
             obj.DisplayOrder = category.DisplayOrder;
@@ -55,7 +55,7 @@ namespace FR.Services
 
         public Category Delete(int id)
         {
-            var category = _context.Categories.FirstOrDefault(c => c.Id == id);
+            var category = _context.Category.FirstOrDefault(c => c.Id == id);
             if (category == null) return null;
 
             try

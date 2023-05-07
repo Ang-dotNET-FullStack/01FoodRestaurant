@@ -14,7 +14,7 @@ namespace FR.Services
 
         public IEnumerable<FoodType> GetAll()
         {
-            var foodTypes = _context.FoodTypes.ToList();
+            var foodTypes = _context.FoodType.ToList();
             return foodTypes;
         }
 
@@ -22,7 +22,7 @@ namespace FR.Services
         {
             try
             {
-                _context.FoodTypes.AddAsync(foodType);
+                _context.FoodType.AddAsync(foodType);
                 this.Save();
             }
             catch(Exception e)
@@ -35,7 +35,7 @@ namespace FR.Services
 
         public FoodType Delete(int id)
         {
-            var fdType = _context.FoodTypes.FirstOrDefault(f => f.Id == id);
+            var fdType = _context.FoodType.FirstOrDefault(f => f.Id == id);
             if (fdType == null) return null;
 
             try
@@ -54,7 +54,7 @@ namespace FR.Services
 
         public FoodType Update(FoodType foodType)
         {
-            var obj = _context.FoodTypes.FirstOrDefault(f => f.Id == foodType.Id);
+            var obj = _context.FoodType.FirstOrDefault(f => f.Id == foodType.Id);
             if (obj == null) return null;
             obj.Name = foodType.Name;
 
