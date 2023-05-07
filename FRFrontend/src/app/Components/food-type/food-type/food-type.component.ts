@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import FoodType from 'src/app/Model/FoodType.model';
+import { FoodTypeService } from '../food-type.service';
 
 @Component({
   selector: 'app-food-type',
@@ -11,12 +12,23 @@ export class FoodTypeComponent implements OnInit {
   foodType : FoodType;
   public foodTypes: any;
 
-  constructor() 
+  constructor(private foodTypeService: FoodTypeService) 
   {
     this.foodType = new FoodType(0, "");
   }
 
   ngOnInit(): void {
+    this.loadAllFoodTypes();
   }
 
+  loadAllFoodTypes(){
+    this.foodTypeService.getFoodTypes().subscribe(res =>{
+      this.foodTypes = res;
+    },
+    (err)=>{
+      console.log(err);
+    });
+  }
+
+  onDelete(id: number){}
 }

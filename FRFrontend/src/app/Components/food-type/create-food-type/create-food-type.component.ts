@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import FoodType from 'src/app/Model/FoodType.model';
+import { Router } from '@angular/router';
+import { FoodTypeService } from '../food-type.service';
 
 @Component({
   selector: 'app-create-food-type',
@@ -7,9 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateFoodTypeComponent implements OnInit {
 
-  constructor() { }
+  foodType: FoodType;
+
+  constructor
+  (
+    private foodTypeService: FoodTypeService,
+    private route: Router
+  )
+  {
+    this.foodType=new FoodType(0,"");
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(form: NgForm){
+    this.foodTypeService.createFoodType(this.foodType).subscribe(res=>{
+      console.log("Food Type created successfully!");
+    },(err) =>{
+      console.log(err);
+    });
+    this.route.navigate(['foodType']);
+  }
 }

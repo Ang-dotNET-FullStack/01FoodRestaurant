@@ -12,7 +12,7 @@ export class FoodTypeApiService {
 
   constructor(private apiBaseService:ApiBaseService) { }  
 
-  getAllFoodtypes(): Observable<FoodType>{
+  getAllFoodTypes(): Observable<FoodType>{
     return this.apiBaseService.getAll(this.url);
   }
 
