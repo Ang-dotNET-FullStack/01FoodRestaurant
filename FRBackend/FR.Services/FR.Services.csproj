@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CategoryService.cs~RF33406d97.TMP" />
     <None Remove="FoodTypeService.cs~RF2f2d77aa.TMP" />
   </ItemGroup>
 

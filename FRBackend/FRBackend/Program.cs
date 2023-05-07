@@ -6,15 +6,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+ 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<FRDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("FRConnection"))
 );
-
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IFoodTypeService, FoodTypeService>();
-//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -26,6 +22,8 @@ builder.Services.AddCors(options =>
         builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });    
 });
+
+IUnitOfWork.RegisterIoc(builder.Services);
 
 var app = builder.Build();
 
