@@ -30,5 +30,11 @@ export class FoodTypeComponent implements OnInit {
     });
   }
 
-  onDelete(id: number){}
+  onDelete(id: number){
+    this.foodTypeService.deleteCatgory(id).subscribe(res=>{
+      this.foodTypeService.reloadPage();
+    },(err)=>{
+      console.log(err);
+    })
+  }
 }
