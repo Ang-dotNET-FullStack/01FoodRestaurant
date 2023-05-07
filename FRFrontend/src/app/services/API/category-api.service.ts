@@ -8,7 +8,7 @@ import Category from 'src/app/Model/Category.model';
 })
 export class CategoryApiService {
 
-  url:string ="Categories";
+  url:string ="Category";
   constructor(private apiBaseService:ApiBaseService) { }
 
   getAllCategories(): Observable<Category>{
