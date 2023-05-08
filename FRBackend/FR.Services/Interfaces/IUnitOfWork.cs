@@ -16,6 +16,7 @@ namespace FR.Services.Interfaces
 
             _services.AddScoped<ICategoryService, CategoryService>();
             _services.AddScoped<IFoodTypeService, FoodTypeService>();
+            _services.AddScoped<IMenuItemService, MenuItemService>();
         }
     }
 }
