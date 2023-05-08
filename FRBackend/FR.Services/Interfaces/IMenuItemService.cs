@@ -2,8 +2,9 @@
 
 namespace FR.Services.Interfaces
 {
-    public interface IMenuItemService
+    public interface IMenuItemService : IRepository<MenuItem>
     {
-        void Update(MenuItem menuItem);
+        MenuItem Update(MenuItem menuItem);
+        MenuItem Delete(int id);
     }
 }

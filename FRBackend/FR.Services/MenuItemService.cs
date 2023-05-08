@@ -1,39 +1,70 @@
-﻿using FR.Models;
+﻿using FR.DataAccess.Data;
+using FR.Models;
 using FR.Services.Interfaces;
-using System.Linq.Expressions;
 
 namespace FR.Services
 {
-    public class MenuItemService : IRepository<MenuItem>, IMenuItemService
+    public class MenuItemService : Repository<MenuItem>, IMenuItemService
     {
-        public MenuItem Add(MenuItem entity)
+
+        private readonly FRDbContext _context;
+        public MenuItemService(FRDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
+        public MenuItem Add(MenuItem menuItem)
+        {
+            try
+            {
+                _context.MenuItem.AddAsync(menuItem);
+                Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return menuItem;
+        }
+
+        public MenuItem Delete(int id)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<MenuItem> GetAll() 
         {
-            throw new NotImplementedException();
+            var menuItems = _context.MenuItem.ToList();
+            return menuItems;
         }
 
-        public MenuItem GetFirstOrDefault(Expression<Func<MenuItem, bool>>? filter = null)
+        public MenuItem Update(MenuItem menuItem)
         {
-            throw new NotImplementedException();
-        }
 
-        public MenuItem Remove(MenuItem entity)
-        {
-            throw new NotImplementedException();
-        }
+            var obj = _context.MenuItem.FirstOrDefault(c => c.Id == menuItem.Id);
+            if (obj == null) return null;
+            obj.Name = menuItem.Name;
+            obj.Description = menuItem.Description;
+            obj.Price = menuItem.Price;
+            obj.CategoryId = menuItem.CategoryId;
+            obj.FoodTypeId = menuItem.FoodTypeId;
+            if (obj.Image != null)
+            {
+                obj.Image = menuItem.Image;
+            }
 
-        public void RemoveRange(IEnumerable<MenuItem> entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Save()
-        {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Update(obj);
+                Save();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return obj;
         }
     }
 }

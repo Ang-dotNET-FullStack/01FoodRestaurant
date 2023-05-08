@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Controllers\FoodTypeController.cs~RF2f33128a.TMP" />
+    <None Remove="Controllers\MenuItemController.cs~RF395ee1db.TMP" />
   </ItemGroup>
 
   <ItemGroup>
