@@ -6,8 +6,15 @@ import { EditCategoryComponent } from './components/category/edit-category/edit-
 import { FoodTypeComponent } from './components/food-type/food-type/food-type.component';
 import { CreateFoodTypeComponent } from './components/food-type/create-food-type/create-food-type.component';
 import { EditFoodTypeComponent } from './components/food-type/edit-food-type/edit-food-type.component';
+import { MenuItemComponent } from './components/menu-item/menu-item/menu-item.component';
+import { CreateMenuItemComponent } from './components/menu-item/create-menu-item/create-menu-item.component';
+import { EditMenuItemComponent } from './components/menu-item/edit-menu-item/edit-menu-item.component';
 
 const routes: Routes = [  
+  {
+    path:"",
+    component: MenuItemComponent
+  },
   {
     path:'category',
     component: CategoryComponent
@@ -31,6 +38,18 @@ const routes: Routes = [
   {
     path:'editFoodType',
     component:EditFoodTypeComponent
+  },
+  {
+    path:'menuItem',
+    component: MenuItemComponent
+  },
+  {
+    path:'createMenuItem',
+    component: CreateMenuItemComponent
+  },
+  {
+    path:'editMenuItem',
+    component:EditMenuItemComponent
   }
 ];
 

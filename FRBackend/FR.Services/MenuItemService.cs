@@ -30,7 +30,20 @@ namespace FR.Services
 
         public MenuItem Delete(int id)
         {
-            throw new NotImplementedException();
+            var menuItem = _context.MenuItem.FirstOrDefault(m => m.Id == id);
+            if (menuItem == null) return null;
+
+            try
+            {
+                _context.Remove(menuItem);
+                Save();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+            return menuItem;
         }
 
         public IEnumerable<MenuItem> GetAll() 

@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
 import { FoodTypeModule } from './components/food-type/food-type.module';
+import { MenuItemModule } from './components/menu-item/menu-item.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FoodTypeModule } from './components/food-type/food-type.module';
     CategoryModule,
     HttpClientModule,
     NgbModule,
-    FoodTypeModule
+    FoodTypeModule,
+    MenuItemModule
   ],
   providers: [],
   bootstrap: [AppComponent]
