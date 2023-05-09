@@ -1,4 +1,4 @@
-export default class MenuItem{
+export class MenuItem{
     id: number;
     name: string;
     description: string;

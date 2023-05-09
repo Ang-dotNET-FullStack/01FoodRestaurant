@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MenuItem } from 'src/app/Models/MenuItem.model';
 
 @Component({
   selector: 'app-upsert-menu-item',
@@ -8,7 +9,11 @@ import { NgForm } from '@angular/forms';
 })
 export class UpsertMenuItemComponent implements OnInit {
 
-  constructor() { }
+  menuItem: MenuItem;
+  constructor()
+  { 
+    this.menuItem = new MenuItem(0,"","","",0,0,0);
+  }
 
   ngOnInit(): void {
   }

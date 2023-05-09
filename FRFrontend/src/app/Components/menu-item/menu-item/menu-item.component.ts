@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'src/app/Models/MenuItem.model';
 
 @Component({
   selector: 'app-menu-item',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuItemComponent implements OnInit {
 
-  constructor() { }
+  menuItem: MenuItem;
+  constructor()
+  {
+    this.menuItem = new MenuItem(0,"","","",0,0,0);
+  }
 
   ngOnInit(): void {
   }
