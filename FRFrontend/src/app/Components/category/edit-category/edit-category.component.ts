@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import Category from 'src/app/Model/Category.model';
+import Category from 'src/app/Models/Category.model';
 import { CategoryService } from '../category.service';
 
 @Component({

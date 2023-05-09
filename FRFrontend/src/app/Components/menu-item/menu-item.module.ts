@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuItemComponent } from './menu-item/menu-item.component';
-import { CreateMenuItemComponent } from './create-menu-item/create-menu-item.component';
-import { EditMenuItemComponent } from './edit-menu-item/edit-menu-item.component';
-
-
+import DataTable from 'datatables.net-dt';
+import { UpsertMenuItemComponent } from './upsert-menu-item/upsert-menu-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MenuItemComponent,
-    CreateMenuItemComponent,
-    EditMenuItemComponent
-  ],
+    DataTable,
+    UpsertMenuItemComponent
+ ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class MenuItemModule { }

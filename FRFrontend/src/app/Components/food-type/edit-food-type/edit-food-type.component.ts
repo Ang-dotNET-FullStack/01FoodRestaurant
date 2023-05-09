@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import FoodType from 'src/app/Model/FoodType.model';
+import FoodType from 'src/app/Models/FoodType.model';
 import { FoodTypeApiService } from 'src/app/services/API/food-type-api.service';
 import { FoodTypeService } from '../food-type.service';
 

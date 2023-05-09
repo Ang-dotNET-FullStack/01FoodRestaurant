@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import Category from 'src/app/Model/Category.model';
+import Category from 'src/app/Models/Category.model';
 import { CategoryApiService } from 'src/app/services/API/category-api.service';
 
 @Injectable({

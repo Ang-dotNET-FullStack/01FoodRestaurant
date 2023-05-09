@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiBaseService } from '../api-base.service';
-import FoodType from 'src/app/Model/FoodType.model';
+import FoodType from 'src/app/Models/FoodType.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
