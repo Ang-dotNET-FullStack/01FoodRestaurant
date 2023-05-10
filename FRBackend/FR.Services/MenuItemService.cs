@@ -38,6 +38,7 @@ namespace FR.Services
                 Name = menuItem.Name,
                 Description = menuItem.Description,
                 Image = menuItem.Image,
+                Price = menuItem.Price,
                 FoodTypeId = menuItem.FoodTypeId,
                 CategoryId = menuItem.CategoryId,
                 Category = this.GetCategory(menuItem.CategoryId),

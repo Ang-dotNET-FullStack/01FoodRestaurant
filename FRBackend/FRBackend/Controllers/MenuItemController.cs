@@ -22,5 +22,14 @@ namespace FRBackend.Controllers
 
             return Ok(menuItem);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddMenuItem(MenuItem menuItem)
+        {
+            var menu = _menuItemService.Add(menuItem);
+            if (menu == null) return NotFound();
+
+            return Ok(menu);
+        }
     }
 }
