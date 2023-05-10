@@ -8,13 +8,20 @@ namespace FR.Services
     {
 
         private readonly FRDbContext _context;
-        public MenuItemService(FRDbContext context) : base(context)
+        private readonly ICategoryService _category;
+        private readonly IFoodTypeService _foodType;
+        public MenuItemService(FRDbContext context, ICategoryService category, IFoodTypeService foodType) : base(context)
         {
-            _context = context;
+           _context = context;
+           _category = category;
+           _foodType = foodType;
+
         }
 
         public MenuItem Add(MenuItem menuItem)
         {
+            var category = menuItem.CategoryId;
+            var foodType = menuItem.FoodTypeId;
             try
             {
                 _context.MenuItem.AddAsync(menuItem);
@@ -49,12 +56,16 @@ namespace FR.Services
         public IEnumerable<MenuItem> GetAll() 
         {
             var menuItems = _context.MenuItem.ToList();
+            List<MenuItem> menu = new List<MenuItem>();
+            foreach (var menuItem in menuItems)
+            {
+                var category = _category.GetFirstOrDefault();
+            }
             return menuItems;
         }
 
         public MenuItem Update(MenuItem menuItem)
         {
-
             var obj = _context.MenuItem.FirstOrDefault(c => c.Id == menuItem.Id);
             if (obj == null) return null;
             obj.Name = menuItem.Name;

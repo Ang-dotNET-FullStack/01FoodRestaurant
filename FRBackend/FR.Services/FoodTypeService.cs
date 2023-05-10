@@ -69,7 +69,11 @@ namespace FR.Services
                 return null;
             }
             return obj;
-        }        
+        }
 
+        public FoodType Get(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
