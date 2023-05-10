@@ -24,8 +24,8 @@ namespace FR.Services
             List<MenuItem> menu = new List<MenuItem>();
             foreach (var menuItem in menuItems)
             {
-                menuItem.Category = _category.Get(menuItem.CategoryId);
-                menuItem.FoodType = _foodType.Get(menuItem.FoodTypeId);
+                menuItem.Category = this.GetCategory(menuItem.CategoryId);
+                menuItem.FoodType = this.GetFoodType(menuItem.FoodTypeId);
                 menu.Add(menuItem);
             }
             return menu;
@@ -40,8 +40,8 @@ namespace FR.Services
                 Image = menuItem.Image,
                 FoodTypeId = menuItem.FoodTypeId,
                 CategoryId = menuItem.CategoryId,
-                Category = _category.Get(menuItem.CategoryId),
-                FoodType = _foodType.Get(menuItem.CategoryId)
+                Category = this.GetCategory(menuItem.CategoryId),
+                FoodType = this.GetFoodType(menuItem.FoodTypeId)
             };
 
             try
@@ -84,6 +84,8 @@ namespace FR.Services
             obj.Price = menuItem.Price;
             obj.CategoryId = menuItem.CategoryId;
             obj.FoodTypeId = menuItem.FoodTypeId;
+            obj.Category = this.GetCategory(menuItem.CategoryId);
+            obj.FoodType = this.GetFoodType(menuItem.FoodTypeId);
             if (obj.Image != null)
             {
                 obj.Image = menuItem.Image;
@@ -100,6 +102,16 @@ namespace FR.Services
                 return null;
             }
             return obj;
+        }
+
+        private Category GetCategory(int id)
+        {
+            return _category.Get(id);
+        }
+
+        private FoodType GetFoodType(int id)
+        {
+            return _foodType.Get(id);
         }
     }
 }
