@@ -18,6 +18,19 @@ namespace FR.Services
 
         }
 
+        public IEnumerable<MenuItem> GetAll()
+        {
+            var menuItems = _context.MenuItem.ToList();
+            List<MenuItem> menu = new List<MenuItem>();
+            foreach (var menuItem in menuItems)
+            {
+                menuItem.Category = _category.Get(menuItem.CategoryId);
+                menuItem.FoodType = _foodType.Get(menuItem.FoodTypeId);
+                menu.Add(menuItem);
+            }
+            return menu;
+        }
+
         public MenuItem Add(MenuItem menuItem)
         {
             var category = menuItem.CategoryId;
@@ -51,18 +64,7 @@ namespace FR.Services
                 return null;
             }
             return menuItem;
-        }
-
-        public IEnumerable<MenuItem> GetAll() 
-        {
-            var menuItems = _context.MenuItem.ToList();
-            List<MenuItem> menu = new List<MenuItem>();
-            foreach (var menuItem in menuItems)
-            {
-                var category = _category.GetFirstOrDefault();
-            }
-            return menuItems;
-        }
+        }        
 
         public MenuItem Update(MenuItem menuItem)
         {

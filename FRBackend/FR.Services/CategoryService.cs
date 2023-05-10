@@ -70,5 +70,7 @@ namespace FR.Services
             }
             return category;
         }
+
+        public Category Get(int id) => _context.Category.FirstOrDefault(f => f.Id == id);
     }
 }

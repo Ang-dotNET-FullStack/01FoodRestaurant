@@ -71,9 +71,6 @@ namespace FR.Services
             return obj;
         }
 
-        public FoodType Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public FoodType Get(int id) => _context.FoodType.FirstOrDefault(f => f.Id == id);
     }
 }
