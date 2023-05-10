@@ -27,13 +27,17 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Food Type: </label> 
-            <input type="text" class="form-control" placeholder="Food Type" 
-             name="foodType" />
+            <select type="text" class="form-select" placeholder="Food Type" 
+             name="foodType" [value]="menuItem.foodTypeId">
+                <option disabled selected>-Select Food Type-</option>
+            </select>
         </div>
         <div class="mb-3">
             <label class="form-label">Category: </label> 
-            <input type="text" class="form-control" placeholder="Category"
-            name="category" />
+            <select type="text" class="form-select" placeholder="Category"
+            name="category" [value]="menuItem.categoryId">
+                <option disabled selected>-Select Category-</option>
+            </select>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px;">{{menuItem.id != 0 ? "Update" : "Create"}}</button>
     </div>

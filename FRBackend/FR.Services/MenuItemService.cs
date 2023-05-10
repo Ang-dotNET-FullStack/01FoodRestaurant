@@ -40,9 +40,7 @@ namespace FR.Services
                 Image = menuItem.Image,
                 Price = menuItem.Price,
                 FoodTypeId = menuItem.FoodTypeId,
-                CategoryId = menuItem.CategoryId,
-                Category = this.GetCategory(menuItem.CategoryId),
-                FoodType = this.GetFoodType(menuItem.FoodTypeId)
+                CategoryId = menuItem.CategoryId
             };
 
             try
@@ -85,8 +83,6 @@ namespace FR.Services
             obj.Price = menuItem.Price;
             obj.CategoryId = menuItem.CategoryId;
             obj.FoodTypeId = menuItem.FoodTypeId;
-            obj.Category = this.GetCategory(menuItem.CategoryId);
-            obj.FoodType = this.GetFoodType(menuItem.FoodTypeId);
             if (obj.Image != null)
             {
                 obj.Image = menuItem.Image;

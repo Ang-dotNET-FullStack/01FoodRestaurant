@@ -18,6 +18,7 @@ namespace FR.Models
         [ForeignKey("FoodTypeId")]
 
         public int CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
 
         public Category Category { get; set; }
         public FoodType FoodType { get; set; }
