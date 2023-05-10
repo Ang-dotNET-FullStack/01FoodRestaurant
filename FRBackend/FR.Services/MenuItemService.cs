@@ -33,11 +33,20 @@ namespace FR.Services
 
         public MenuItem Add(MenuItem menuItem)
         {
-            var category = menuItem.CategoryId;
-            var foodType = menuItem.FoodTypeId;
+            MenuItem menu = new MenuItem()
+            {
+                Name = menuItem.Name,
+                Description = menuItem.Description,
+                Image = menuItem.Image,
+                FoodTypeId = menuItem.FoodTypeId,
+                CategoryId = menuItem.CategoryId,
+                Category = _category.Get(menuItem.CategoryId),
+                FoodType = _foodType.Get(menuItem.CategoryId)
+            };
+
             try
             {
-                _context.MenuItem.AddAsync(menuItem);
+                _context.MenuItem.AddAsync(menu);
                 Save();
             }
             catch(Exception e)
@@ -45,7 +54,7 @@ namespace FR.Services
                 Console.WriteLine(e);
                 return null;
             }
-            return menuItem;
+            return menu;
         }
 
         public MenuItem Delete(int id)
