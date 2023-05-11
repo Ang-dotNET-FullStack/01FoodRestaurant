@@ -1,4 +1,5 @@
 ﻿using FR.Models;
+using FR.Services;
 using FR.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,15 @@ namespace FRBackend.Controllers
             if (menu == null) return NotFound();
 
             return Ok(menu);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMenuItem(int id)
+        {
+            var category = _menuItemService.Delete(id);
+            if (category == null) return BadRequest();
+
+            return Ok(category);
         }
     }
 }

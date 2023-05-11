@@ -30,7 +30,7 @@
             <select type="text" class="form-select" placeholder="Food Type" Name="ngModel" 
             [(ngModel)]="menuItem.foodTypeId" name="foodType">
                 <option disabled selected>-Select Food Type-</option>
-                <option *ngFor="let foodType of foodTypes" value="{{foodType.name}}">
+                <option *ngFor="let foodType of foodTypes" value="{{foodType.id}}">
                     {{foodType.name}}
                 </option>   
             </select>
@@ -40,7 +40,7 @@
             <select type="text" class="form-select" placeholder="Category" #Name="ngModel" 
             [(ngModel)]="menuItem.categoryId" name="category">
                 <option disabled selected>-Select Category-</option>
-                <option *ngFor="let category of categories" value="{{category.name}}">
+                <option *ngFor="let category of categories" value="{{category.id}}">
                     {{category.name}}
                 </option>                
             </select>

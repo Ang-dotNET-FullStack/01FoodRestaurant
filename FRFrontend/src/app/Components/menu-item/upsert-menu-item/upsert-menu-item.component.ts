@@ -32,10 +32,10 @@ export class UpsertMenuItemComponent implements OnInit {
   onSubmit(form : NgForm){
     this.menuItemService.createMenuItem(this.menuItem).subscribe(res=>{
       console.log("Menu Item created successfully!");
+      // this.route.navigate(['menuItem']);
     },(err) =>{
       console.log(err);
-    });
-    this.route.navigate(['menuItem']);
+    });   
   }
 
   loadCategories(){
