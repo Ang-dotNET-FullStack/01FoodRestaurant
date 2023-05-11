@@ -5,7 +5,7 @@
         </div>
         <div class="col-6 d-flex justify-content-end">
             <a class="btn btn-primary" href="upsertMenuItem">
-                {{menuItem.id != 0 ? "Update " : "Create "}}Menu Item
+                Create Menu Item
             </a>
         </div>        
     </div>
@@ -16,11 +16,21 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Description</th>
                 <th>Price</th>
                 <th>Category</th>
                 <th>Food Type</th>
                 <th></th>
-            </tr>          
+            </tr> 
         </thead>
+        <tbody>
+            <tr *ngFor="let menuItem of menuItems">
+                <td >{{menuItem.name}}</td>
+                <td >{{menuItem.description}}</td>
+                <td >{{menuItem.price}}</td>
+                <td >{{menuItem.category.name}}</td>
+                <td >{{menuItem.foodType.name}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>

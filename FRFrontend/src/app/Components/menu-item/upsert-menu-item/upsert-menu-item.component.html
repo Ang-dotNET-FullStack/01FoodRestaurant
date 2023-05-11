@@ -1,4 +1,4 @@
-<form #form="ngForm" (submit)="onSubmit(form)" enctype="multipart/form-data">
+<form #form="ngForm" (submit)="onSubmit(form)">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary pe-3">{{menuItem.id != 0 ? "Update " : "Create "}}Menu Item</h2>
@@ -22,13 +22,13 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Image: </label> 
-            <input type="file" class="form-control" placeholder="Image" #Name="ngModel" 
+            <input type="text" class="form-control" placeholder="Image" #Name="ngModel" 
             [(ngModel)]="menuItem.image" name="image" id="uploadBox"/>
         </div>
         <div class="mb-3">
             <label class="form-label">Food Type: </label> 
-            <select type="text" class="form-select" placeholder="Food Type" 
-             name="foodType" [value]="menuItem.foodTypeId">
+            <select type="text" class="form-select" placeholder="Food Type" Name="ngModel" 
+            [(ngModel)]="menuItem.foodTypeId" name="foodType">
                 <option disabled selected>-Select Food Type-</option>
                 <option *ngFor="let foodType of foodTypes" value="{{foodType.name}}">
                     {{foodType.name}}
@@ -37,8 +37,8 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Category: </label> 
-            <select type="text" class="form-select" placeholder="Category"
-            name="category" [value]="menuItem.categoryId">
+            <select type="text" class="form-select" placeholder="Category" #Name="ngModel" 
+            [(ngModel)]="menuItem.categoryId" name="category">
                 <option disabled selected>-Select Category-</option>
                 <option *ngFor="let category of categories" value="{{category.name}}">
                     {{category.name}}

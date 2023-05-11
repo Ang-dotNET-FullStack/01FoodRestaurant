@@ -31,11 +31,11 @@ export class UpsertMenuItemComponent implements OnInit {
 
   onSubmit(form : NgForm){
     this.menuItemService.createMenuItem(this.menuItem).subscribe(res=>{
-      console.log("Food Type created successfully!");
+      console.log("Menu Item created successfully!");
     },(err) =>{
       console.log(err);
     });
-    this.route.navigate(['foodType']);
+    this.route.navigate(['menuItem']);
   }
 
   loadCategories(){
@@ -50,6 +50,7 @@ export class UpsertMenuItemComponent implements OnInit {
   loadFoodTypes(){
     this.menuItemService.getFoodTypes().subscribe(res=>{
       this.foodTypes = res;
+      console.log(this.menuItem);
     },
     (err)=>{
       console.log(err);

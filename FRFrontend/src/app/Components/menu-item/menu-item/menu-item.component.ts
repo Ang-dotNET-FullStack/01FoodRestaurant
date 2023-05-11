@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'src/app/Models/MenuItem.model';
+import { MenuItemApiService } from 'src/app/services/API/menu-item-api.service';
+import { MenuItemService } from '../menu-item.service';
 
 @Component({
   selector: 'app-menu-item',
@@ -8,13 +10,20 @@ import { MenuItem } from 'src/app/Models/MenuItem.model';
 })
 export class MenuItemComponent implements OnInit {
 
-  menuItem: MenuItem;
-  constructor()
-  {
-    this.menuItem = new MenuItem(0,"","","",0,0,0);
-  }
+  menuItems: any;
+  constructor(private menuItemService: MenuItemService) {  }
 
   ngOnInit(): void {
+    this.getMenuItems();
   }
 
+  getMenuItems(){
+    this.menuItemService.getMenuItems().subscribe(res=>{
+      this.menuItems = res;
+      console.log("Menu Items loaded successfully!");
+    },
+    (err)=>{
+      console.log(err);
+    });
+  }
 }
