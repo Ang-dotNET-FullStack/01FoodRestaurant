@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FR.DataAccess.Migrations
 {
     [DbContext(typeof(FRDbContext))]
-    [Migration("20230507080314_addtablesToDb")]
-    partial class addtablesToDb
+    [Migration("20230512152424_addDbs")]
+    partial class addDbs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

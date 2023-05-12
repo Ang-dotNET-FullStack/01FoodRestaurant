@@ -17,10 +17,10 @@ namespace FR.Models
 
         public virtual int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
-        public virtual Category Categories { get; set; }
+        public virtual Category Category { get; set; }
 
         public virtual int FoodTypeId { get; set; }
         [ForeignKey("FoodTypeId")]        
-        public virtual FoodType FoodTypes { get; set; }
+        public virtual FoodType FoodType { get; set; }
     }
 }

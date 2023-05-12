@@ -9,12 +9,14 @@ export class MenuItem{
     price: number;
     foodTypeId: number;
     categoryId: number;
-    category: Category;
-    foodType: FoodType;
+    //category: Category;
+    //foodType: FoodType;
     
 
     constructor(id: number, name: string, description: string, image: string, price: number,
-         foodTypeId: number, categoryId: number, category: Category, foodType: FoodType)
+         foodTypeId: number, categoryId: number, 
+         //category: Category, foodType: FoodType
+         )
     {
         this.id = id;
         this.name = name;
@@ -23,7 +25,7 @@ export class MenuItem{
         this.price = price;
         this.foodTypeId = foodTypeId;
         this.categoryId = categoryId;
-        this.category = category;
-        this.foodType = foodType;
+        //this.category = category;
+        //this.foodType = foodType;
     }
 }

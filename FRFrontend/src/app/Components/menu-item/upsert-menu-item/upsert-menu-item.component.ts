@@ -27,7 +27,7 @@ export class UpsertMenuItemComponent implements OnInit {
   { 
     this.category = new Category(0,"",0);
     this.foodType = new FoodType(0,"");
-    this.menuItem = new MenuItem(0,"","","",0,0,0,this.category, this.foodType);
+    this.menuItem = new MenuItem(0,"","","",0,0,0);
   }
 
   ngOnInit(): void {

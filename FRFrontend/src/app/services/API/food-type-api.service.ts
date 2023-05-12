@@ -16,6 +16,10 @@ export class FoodTypeApiService {
     return this.apiBaseService.getAll(this.url);
   }
 
+  getFoodTypeById<FoodType>(id: number): Observable<FoodType>{
+    return this.apiBaseService.getOne(id, this.url);
+  }
+
   createFoodType<FoodType>(foodType: FoodType): Observable<FoodType>{    
     return this.apiBaseService.create(this.url, foodType);
   } 

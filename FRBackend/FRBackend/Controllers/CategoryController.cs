@@ -23,6 +23,15 @@ namespace FRBackend.Controllers
             return Ok(categories);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCategoryById(int id)
+        {
+            var category = _categoryService.Get(id);
+            if (category == null) return NotFound();
+
+            return Ok(category);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AddCategories(Category category)
         {

@@ -1,4 +1,5 @@
 ﻿using FR.Models;
+using FR.Services;
 using FR.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,15 @@ namespace FRBackend.Controllers
             if(foodTypes == null) return NotFound();
 
             return Ok(foodTypes);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFoodTypeById(int id)
+        {
+            var foodType = _foodTypeService.Get(id);
+            if (foodType == null) return NotFound();
+
+            return Ok(foodType);
         }
 
         [HttpPost]

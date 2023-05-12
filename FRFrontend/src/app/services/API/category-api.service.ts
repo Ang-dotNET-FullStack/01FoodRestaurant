@@ -15,6 +15,10 @@ export class CategoryApiService {
     return this.apiBaseService.getAll(this.url);
   }
 
+  getCategoryById<Category>(id: number): Observable<Category>{
+    return this.apiBaseService.getOne(id, this.url);
+  }
+
   createCategory<Category>(category: Category): Observable<Category>{    
     return this.apiBaseService.create(this.url, category);
   } 

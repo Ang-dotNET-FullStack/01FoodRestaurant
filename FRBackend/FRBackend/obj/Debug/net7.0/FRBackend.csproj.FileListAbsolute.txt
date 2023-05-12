@@ -1,3 +1,9 @@
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.csproj.AssemblyReference.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.GeneratedMSBuildEditorConfig.editorconfig
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.AssemblyInfoInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.AssemblyInfo.cs
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.csproj.CoreCompileInputs.cache
+F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.MvcApplicationPartsAssemblyInfo.cache
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\appsettings.Development.json
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\appsettings.json
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FRBackend.exe
@@ -59,13 +65,6 @@ F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRB
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.DataAccess.pdb
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Services.pdb
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\bin\Debug\net7.0\FR.Models.pdb
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.csproj.AssemblyReference.cache
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.GeneratedMSBuildEditorConfig.editorconfig
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.AssemblyInfoInputs.cache
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.AssemblyInfo.cs
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.csproj.CoreCompileInputs.cache
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.MvcApplicationPartsAssemblyInfo.cs
-F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\FRBackend.MvcApplicationPartsAssemblyInfo.cache
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\staticwebassets\msbuild.FRBackend.Microsoft.AspNetCore.StaticWebAssets.props
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\staticwebassets\msbuild.build.FRBackend.props
 F:\Proj\Angular + Asp .net\Angular+.NET FullStack\01FoodRestaurant\FRBackend\FRBackend\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.FRBackend.props

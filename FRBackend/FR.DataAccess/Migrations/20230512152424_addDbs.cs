@@ -5,7 +5,7 @@
 namespace FR.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class addtablesToDb : Migration
+    public partial class addDbs : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,8 +47,8 @@ namespace FR.DataAccess.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    FoodTypeId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    FoodTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
