@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { MenuItem } from 'src/app/Models/MenuItem.model';
 import { MenuItemService } from '../menu-item.service';
 import { Router } from '@angular/router';
+import Category from 'src/app/Models/Category.model';
+import FoodType from 'src/app/Models/FoodType.model';
 
 @Component({
   selector: 'app-upsert-menu-item',
@@ -12,6 +14,8 @@ import { Router } from '@angular/router';
 export class UpsertMenuItemComponent implements OnInit {
 
   menuItem: MenuItem;
+  category: Category;
+  foodType: FoodType;
   categories: any;
   foodTypes: any;
 
@@ -21,7 +25,9 @@ export class UpsertMenuItemComponent implements OnInit {
     private route: Router
   )
   { 
-    this.menuItem = new MenuItem(0,"","","",0,0,0);
+    this.category = new Category(0,"",0);
+    this.foodType = new FoodType(0,"");
+    this.menuItem = new MenuItem(0,"","","",0,0,0,this.category, this.foodType);
   }
 
   ngOnInit(): void {
@@ -35,7 +41,7 @@ export class UpsertMenuItemComponent implements OnInit {
       // this.route.navigate(['menuItem']);
     },(err) =>{
       console.log(err);
-    });   
+    }); 
   }
 
   loadCategories(){

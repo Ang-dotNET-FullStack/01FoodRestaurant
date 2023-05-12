@@ -28,9 +28,9 @@ export class CreateFoodTypeComponent implements OnInit {
   onSubmit(form: NgForm){
     this.foodTypeService.createFoodType(this.foodType).subscribe(res=>{
       console.log("Food Type created successfully!");
+      this.route.navigate(['foodType']);
     },(err) =>{
       console.log(err);
     });
-    this.route.navigate(['foodType']);
   }
 }

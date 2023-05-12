@@ -36,10 +36,10 @@ namespace FRBackend.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMenuItem(int id)
         {
-            var category = _menuItemService.Delete(id);
-            if (category == null) return BadRequest();
+            var menuItem = _menuItemService.Delete(id);
+            if (menuItem == null) return BadRequest();
 
-            return Ok(category);
+            return Ok(menuItem);
         }
     }
 }

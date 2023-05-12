@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'src/app/Models/MenuItem.model';
-import { MenuItemApiService } from 'src/app/services/API/menu-item-api.service';
 import { MenuItemService } from '../menu-item.service';
 
 @Component({

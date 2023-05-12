@@ -30,7 +30,6 @@ export class ApiBaseService {
     url: string,
     requestModel: any
   ): Observable<T> {
-    console.log(requestModel);
     return this.http.post<T>(this.baseUrl + url, requestModel);
   }
 

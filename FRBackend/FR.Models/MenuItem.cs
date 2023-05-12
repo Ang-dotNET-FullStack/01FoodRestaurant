@@ -14,13 +14,13 @@ namespace FR.Models
 
         [Range(1,1000, ErrorMessage = "Price should be between Rs: 100 and Rs: 10,000")]
         public double Price { get; set; }
-        public int FoodTypeId { get; set; }
-        [ForeignKey("FoodTypeId")]
 
-        public int CategoryId { get; set; }
+        public virtual int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
+        public virtual Category Categories { get; set; }
 
-        public Category Category { get; set; }
-        public FoodType FoodType { get; set; }
+        public virtual int FoodTypeId { get; set; }
+        [ForeignKey("FoodTypeId")]        
+        public virtual FoodType FoodTypes { get; set; }
     }
 }

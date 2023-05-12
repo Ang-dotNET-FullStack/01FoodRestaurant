@@ -1,3 +1,6 @@
+import Category from "./Category.model";
+import FoodType from "./FoodType.model";
+
 export class MenuItem{
     id: number;
     name: string;
@@ -6,8 +9,12 @@ export class MenuItem{
     price: number;
     foodTypeId: number;
     categoryId: number;
+    category: Category;
+    foodType: FoodType;
+    
 
-    constructor(id: number, name: string, description: string, image: string, price: number, foodTypeId: number, categoryId: number)
+    constructor(id: number, name: string, description: string, image: string, price: number,
+         foodTypeId: number, categoryId: number, category: Category, foodType: FoodType)
     {
         this.id = id;
         this.name = name;
@@ -16,5 +23,7 @@ export class MenuItem{
         this.price = price;
         this.foodTypeId = foodTypeId;
         this.categoryId = categoryId;
+        this.category = category;
+        this.foodType = foodType;
     }
 }
