@@ -7,14 +7,20 @@
         <input type="hidden" name="Id" [value]="category.id"/>
         <div class="mb-3">
             <label class="form-label">Name: </label> 
-            <input type="text" class="form-control" placeholder={{category.name}} 
-            name="CategoryName" #Name="ngModel" [(ngModel)]="category.name" />
+            <input type="text" class="form-control" placeholder={{category.name}} required 
+            name="CategoryName" #name="ngModel" [(ngModel)]="category.name" />
+            <small class="text-danger" *ngIf="(name.touched || name.pristine) && name.invalid">
+                Name field is required*
+            </small>
         </div>
         <div class="mb-3">
             <label class="form-label">Display Order: </label>
-            <input type="text" name="displayOrder" placeholder="{{category.displayOrder}}"
-            class="form-control" #Name="ngModel" [(ngModel)]="category.displayOrder"/>
+            <input type="number" name="displayOrder" placeholder="{{category.displayOrder}}" min="1" max ="100" required
+                class="form-control" #displayOrder="ngModel" [(ngModel)]="category.displayOrder"/>
+            <small class="text-danger" *ngIf="(displayOrder.touched || displayOrder.pristine) && displayOrder.invalid">
+                Display order must be 1 - 100*
+            </small>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
+        <button type="submit" class="btn btn-primary" style="width:150px;" [disabled]="form.invalid">Update</button>
     </div>
 </form>
