@@ -39,14 +39,13 @@ export class MenuItemService {
     return this.foodTypeApiService.getAllFoodTypes();
   }
 
-  public getCategoryById(id: number){
-    return this.categoryApiService.getCategoryById(id);
-  }
+  // public getCategoryById(id: number){
+  //   return this.categoryApiService.getCategoryById(id);
+  // }
 
-  public getFoodTypeById(id: number){
-    return this.foodTypeApiService.getFoodTypeById(id);
-  }
-  
+  // public getFoodTypeById(id: number){
+  //   return this.foodTypeApiService.getFoodTypeById(id);
+  // }  
 
   public reloadPage(){
     window.location.reload();

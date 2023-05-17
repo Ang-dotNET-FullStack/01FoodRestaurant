@@ -8,7 +8,7 @@ import { MenuItem } from 'src/app/Models/MenuItem.model';
 })
 export class MenuItemApiService {
 
-  url:string ="MenuItem";
+  url:string = "MenuItem";
   constructor(private apiBaseService:ApiBaseService) { }
 
   getAllMenuItems(): Observable<MenuItem>{

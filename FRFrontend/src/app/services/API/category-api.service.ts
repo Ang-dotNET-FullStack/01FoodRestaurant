@@ -15,7 +15,7 @@ export class CategoryApiService {
     return this.apiBaseService.getAll(this.url);
   }
 
-  getCategoryById<Category>(id: number): Observable<Category>{
+  getCategoryById(id: number): Observable<Category>{
     return this.apiBaseService.getOne(id, this.url);
   }
 
