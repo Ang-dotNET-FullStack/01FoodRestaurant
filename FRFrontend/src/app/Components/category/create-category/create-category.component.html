@@ -1,4 +1,4 @@
-<form #form="ngForm" (submit)="onSubmit(form)">
+<form  #form="ngForm" (submit)="onSubmit(form)">
     <div class="border p-3 mt-4">
         <div class="row pb-2">
             <h2 class="text-primary pe-3">Create Category</h2>
@@ -7,14 +7,20 @@
         <input type="hidden" name="Id" [value]="category.id"/>
         <div class="mb-3">
             <label class="form-label">Name: </label> 
-            <input type="text" class="form-control" placeholder="Category Name" name="CategoryName"
-            #Name="ngModel" [(ngModel)]="category.name" />
+            <input type="text" class="form-control" placeholder="Category Name" name="categoryName"
+            [(ngModel)]="category.name" #name="ngModel" required>
+            <small class="text-danger" *ngIf="(name.touched || name.pristine) && name.invalid">
+                Name field is required*
+            </small>
         </div>
         <div class="mb-3">
             <label class="form-label">Display Order: </label>
-            <input type="text" name="displayOrder" placeholder="Display Order" 
-            class="form-control" #Name="ngModel" [(ngModel)]="category.displayOrder"/>
+            <input type="text" class="form-control" placeholder="Display Order" name="displayOrder" required pattern="[1-9].{0,}"
+             [(ngModel)]="category.displayOrder" #displayOrder="ngModel" maxlength="2"/>
+             <small class="text-danger" *ngIf="(displayOrder.touched || displayOrder.pristine) && displayOrder.invalid">
+                Please enter valied value* (Display order must be 1 -99!)
+            </small>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+        <button type="submit" class="btn btn-primary" style="width:150px;" [disabled]="form.invalid">Create</button>
     </div>
 </form>

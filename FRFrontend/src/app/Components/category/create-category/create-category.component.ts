@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Category from 'src/app/Models/Category.model';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import { CategoryService } from '../category.service';
 import { Router } from '@angular/router';
 
@@ -12,13 +12,19 @@ import { Router } from '@angular/router';
 export class CreateCategoryComponent implements OnInit {
 
   category: Category = new Category(0, "", 0);
+  loginForm!: FormGroup;
 
   constructor(
     private categoryService: CategoryService,
+    private formBuilder: FormBuilder,
     private router: Router
     ){}
 
   ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      categoryName: ['', Validators.required],
+      displayOrder:['',Validators.required]
+    });
   }
 
   onSubmit(form: NgForm){
