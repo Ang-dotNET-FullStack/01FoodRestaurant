@@ -14,7 +14,7 @@ import FoodType from 'src/app/Models/FoodType.model';
 export class UpsertMenuItemComponent implements OnInit {
 
   menuItem: MenuItem;
-  category: Category = new Category(0,"",0);
+  category: Category;
   foodType: FoodType;
   categories: any;
   foodTypes: any;
@@ -25,6 +25,7 @@ export class UpsertMenuItemComponent implements OnInit {
     private route: Router
   )
   { 
+    this.category = new Category(0,"",0);
     this.foodType = new FoodType(0, "");
     this.menuItem = new MenuItem(0,"","","",0,0,0, this.category, this.foodType);
   }
@@ -37,7 +38,7 @@ export class UpsertMenuItemComponent implements OnInit {
   onSubmit(form : NgForm){  
     this.menuItemService.createMenuItem(this.menuItem).subscribe(res=>{
       console.log("Menu Item created successfully!");
-      //this.route.navigate(['menuItem']);
+      this.route.navigate(['menuItem']);
     },(err) =>{
       console.log(err);
     }); 
@@ -61,18 +62,4 @@ export class UpsertMenuItemComponent implements OnInit {
       console.log(err);
     });
   }
-
-  // getCategory(id: number){
-  //   this.menuItemService.getCategoryById(id).subscribe(res=>{
-  //     this.category = res;        
-  //   });
-  // }
-
-  // getFoodType(id: number){
-  //   this.menuItemService.getFoodTypeById(id).subscribe(res=>{
-  //     this.foodType = res;
-  //   },(err)=>{
-  //     console.log(err);
-  //   });
-  // }
 }
