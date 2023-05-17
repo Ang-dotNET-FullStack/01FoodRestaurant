@@ -7,44 +7,68 @@
         <input type="hidden" name="Id" [value]="menuItem.id"/>
         <div class="mb-3">
             <label class="form-label">Name: </label> 
-            <input type="text" class="form-control" placeholder="Name" #Name="ngModel" 
-            [(ngModel)]="menuItem.name" name="name" />
+            <input type="text" class="form-control" placeholder="Name" #name="ngModel" required 
+                [(ngModel)]="menuItem.name" name="name" />
+            <small class="text-danger" *ngIf="(name.touched || name.pristine) && name.invalid">
+                Name field is required*
+            </small>
         </div>
+
         <div class="mb-3">
             <label class="form-label">Description: </label> 
-            <input type="text" class="form-control" placeholder="Description" #Name="ngModel" 
-            [(ngModel)]="menuItem.description" name="description" />
-        </div>        
+            <input type="text" class="form-control" placeholder="Description" #description="ngModel" required
+                [(ngModel)]="menuItem.description" name="description" />
+            <small class="text-danger" *ngIf="(description.touched || description.pristine) && description.invalid">
+                Description field is required*
+            </small>
+        </div>  
+
         <div class="mb-3">
             <label class="form-label">Price: </label> 
-            <input type="text" class="form-control" placeholder="Price" #Name="ngModel" 
-            [(ngModel)]="menuItem.price" name="price" />
+            <input type="number" class="form-control" placeholder="Price" #price="ngModel" min="100" max="5000" required
+                [(ngModel)]="menuItem.price" name="price" />
+            <small class="text-danger" *ngIf="(price.touched || price.pristine) && price.invalid">
+                Price must be Rs: 100 to Rs: 5000 (Price field required)*
+            </small>
         </div>
+
         <div class="mb-3">
             <label class="form-label">Image: </label> 
-            <input type="text" class="form-control" placeholder="Image" #Name="ngModel" 
+            <input type="text" class="form-control" placeholder="Image" #Name="ngModel" required
             [(ngModel)]="menuItem.image" name="image" id="uploadBox"/>
         </div>
+
         <div class="mb-3">
             <label class="form-label">Food Type: </label> 
-            <select type="text" class="form-select" placeholder="Food Type" Name="ngModel" 
+            <select required class="form-select" placeholder="Food Type" #foodType="ngModel" required
             [(ngModel)]="menuItem.foodTypeId" name="foodType">
-                <option disabled selected>-Select Food Type-</option>
+                <option disabled selected value="">-Select Food Type-</option>
                 <option *ngFor="let foodType of foodTypes" value="{{foodType.id}}">
                     {{foodType.name}}
-                </option>   
+                </option>                
             </select>
+            <small class="text-danger" *ngIf="(foodType.touched || foodType.pristine) && foodType.invalid">
+                Food Type field is required*
+            </small>            
         </div>
+
         <div class="mb-3">
             <label class="form-label">Category: </label> 
-            <select type="text" class="form-select" placeholder="Category" #Name="ngModel" 
+            <select required class="form-select" placeholder="Category" #categoryField="ngModel" 
             [(ngModel)]="menuItem.categoryId" name="category">
-                <option disabled selected>-Select Category-</option>
+                <option disabled selected value="">-Select Category-</option>
                 <option *ngFor="let category of categories" value="{{category.id}}">
                     {{category.name}}
                 </option>                
             </select>
+            <small class="text-danger" *ngIf="(categoryField.touched || categoryField.pristine) && categoryField.invalid">
+                Category field is required*
+            </small>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+
+        <button type="submit" class="btn btn-primary" style="width:150px;" [disabled]="form.invalid">
+            Create
+        </button>
+        
     </div>
 </form>
