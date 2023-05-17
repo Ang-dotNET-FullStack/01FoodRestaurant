@@ -5,6 +5,7 @@ import { MenuItemService } from '../menu-item.service';
 import { Router } from '@angular/router';
 import Category from 'src/app/Models/Category.model';
 import FoodType from 'src/app/Models/FoodType.model';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-upsert-menu-item',
@@ -22,7 +23,8 @@ export class UpsertMenuItemComponent implements OnInit {
   constructor
   (
     private menuItemService: MenuItemService,
-    private route: Router
+    private route: Router,
+    private http: HttpClient
   )
   { 
     this.category = new Category(0,"",0);
@@ -62,4 +64,5 @@ export class UpsertMenuItemComponent implements OnInit {
       console.log(err);
     });
   }
+
 }
