@@ -7,9 +7,14 @@
         <input type="hidden" name="Id" [value]="foodType.id"/>
         <div class="mb-3">
             <label class="form-label">Name: </label> 
-            <input type="text" class="form-control" placeholder="Food Type Name" 
-            name="FoodTypeName" #Name="ngModel" [(ngModel)]="foodType.name"/>
+            <input type="text" class="form-control" placeholder="Food Type Name" required
+                name="FoodTypeName" #name="ngModel" [(ngModel)]="foodType.name"/>
+            <small class="text-danger" *ngIf="(name.touched || name.pristine) && name.invalid">
+                Name field is required*
+            </small>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px;">Create</button>
+        <button type="submit" class="btn btn-primary" style="width:150px;" [disabled]="form.invalid">
+            Create ff
+        </button>
     </div>
 </form>
