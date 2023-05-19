@@ -34,8 +34,8 @@
 
         <div class="mb-3">
             <label class="form-label">Image: </label> 
-            <input type="file" class="form-control" placeholder="Image" #Name="ngModel" required
-            [(ngModel)]="menuItem.image" name="files" id="uploadBox"/>
+            <input type="file" class="form-control" placeholder="Image" #Name="ngModel" required #fileUpload
+            [(ngModel)]="menuItem.image" name="files" id="uploadBox" onchange="console.log(event.target.files)"/>
         </div>
 
         <div class="mb-3">
@@ -72,3 +72,5 @@
         
     </div>
 </form>
+
+<img src="assets/Images/MenuItems/wall.jpg" alt="wall" width="500">

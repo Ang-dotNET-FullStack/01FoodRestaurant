@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import Category from 'src/app/Models/Category.model';
 import FoodType from 'src/app/Models/FoodType.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-upsert-menu-item',
@@ -19,6 +20,7 @@ export class UpsertMenuItemComponent implements OnInit {
   foodType: FoodType;
   categories: any;
   foodTypes: any;
+  file!: File;
 
   constructor
   (
@@ -58,11 +60,22 @@ export class UpsertMenuItemComponent implements OnInit {
   loadFoodTypes(){
     this.menuItemService.getFoodTypes().subscribe(res=>{
       this.foodTypes = res;
-      console.log(this.menuItem);
     },
     (err)=>{
       console.log(err);
     });
   }
 
+  onSelectFile(event: any){
+    this.file = event.target.files[0];
+    this.upload(this.file).subscribe((event: any) => {
+      console.log(event);
+    });
+  }
+
+  upload(file: File): Observable<any>{
+    const formData = new FormData();
+    formData.append("file", file, file.name);
+    return this.http.post("assets/Images/MenuItems", formData);
+  }
 }
